@@ -93,9 +93,9 @@ static int imx_tef6635_hw_params(struct snd_pcm_substream *substream,
 	/* set the SSI system clock as output (unused) */
 	snd_soc_dai_set_sysclk(cpu_dai, IMX_SSP_SYS_CLK, 0, SND_SOC_CLOCK_OUT);
 
-	snd_soc_dai_set_clkdiv(cpu_dai, IMX_SSI_TX_DIV_PM, 3);
+	snd_soc_dai_set_clkdiv(cpu_dai, IMX_SSI_TX_DIV_PM, 2);
 	snd_soc_dai_set_clkdiv(cpu_dai, IMX_SSI_TX_DIV_2, 0);
-	snd_soc_dai_set_clkdiv(cpu_dai, IMX_SSI_TX_DIV_PSR, 0);
+	snd_soc_dai_set_clkdiv(cpu_dai, IMX_SSI_TX_DIV_PSR, 3);
 
 	return 0;
 }
