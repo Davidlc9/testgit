@@ -53,7 +53,7 @@ enum tef6635_reg_tags {
 
 
 static struct snd_soc_dai_driver tef6635_codec_dai = {
-    .name = "tef6635",
+    .name = "tef6635.1",
     .playback = {
         .stream_name = "playback",
         .channels_min = 1,
