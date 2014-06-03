@@ -83,7 +83,7 @@ static int imx_tef6635_hw_params(struct snd_pcm_substream *substream,
 	snd_soc_dai_set_tdm_slot(cpu_dai,
 			channels == 1 ? 0xfffffffe : 0xfffffffc,
 			channels == 1 ? 0xfffffffe : 0xfffffffc,
-			2, 24);
+			2, 16);
 
 	/* set cpu DAI configuration */
 	ret = snd_soc_dai_set_fmt(cpu_dai, dai_format);
@@ -114,10 +114,10 @@ static struct snd_soc_ops imx_tef6635_ops = {
 };
 
 static struct snd_soc_dai_link imx_dai = {
-	.name = "imx-tef6635",
-	.stream_name = "imx-tef6635",
-	.codec_dai_name = "tef6635",
-	.codec_name     = "imx-tef6635",
+	.name = "imx-tef6635.1",
+	.stream_name = "imx-tef6635.1",
+	.codec_dai_name = "tef6635.1",
+	.codec_name     = "imx-tef6635.1",
 	.cpu_dai_name   = "imx-ssi.1",
 	.platform_name  = "imx-pcm-audio.1",
 	.ops = &imx_tef6635_ops,
